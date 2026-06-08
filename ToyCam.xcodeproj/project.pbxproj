@@ -1,0 +1,317 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 63;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0D9DA2308ACCA5BE3F9149FC /* PixelParams.swift in Sources */ = {isa = PBXBuildFile; fileRef = D14490D8F89D7BF5965C93EA /* PixelParams.swift */; };
+		63A3368100F45DC4909023A5 /* ToyCamApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE41F6960368C6CDB4A89E4C /* ToyCamApp.swift */; };
+		707F2E835E1F85262017ACDC /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6275520B7CC2D470111EE412 /* ContentView.swift */; };
+		8B291E9C399DB04A6DBD3B81 /* Shaders.metal in Sources */ = {isa = PBXBuildFile; fileRef = FF0F4A40A07F7E05CDAF1211 /* Shaders.metal */; };
+		8D486AE7F723C0ED2D749BFC /* MetalCameraView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D97D2C8559E0090D2449C0AB /* MetalCameraView.swift */; };
+		D7782FDF4A8937B59458D8BD /* CameraManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 758F7DA4F0FB1BBBC5E9D3AE /* CameraManager.swift */; };
+		FFED313EDC5EE0798298B274 /* Renderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D31103C4098E3C9FBE6EDA6 /* Renderer.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		0D31103C4098E3C9FBE6EDA6 /* Renderer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Renderer.swift; sourceTree = "<group>"; };
+		52ADC64623085A4D18B28CAE /* ToyCam.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ToyCam.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		6275520B7CC2D470111EE412 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		758F7DA4F0FB1BBBC5E9D3AE /* CameraManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraManager.swift; sourceTree = "<group>"; };
+		D14490D8F89D7BF5965C93EA /* PixelParams.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PixelParams.swift; sourceTree = "<group>"; };
+		D97D2C8559E0090D2449C0AB /* MetalCameraView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MetalCameraView.swift; sourceTree = "<group>"; };
+		DFF47C6155C405C233208D72 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		FE41F6960368C6CDB4A89E4C /* ToyCamApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToyCamApp.swift; sourceTree = "<group>"; };
+		FF0F4A40A07F7E05CDAF1211 /* Shaders.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = Shaders.metal; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXGroup section */
+		21583F0B38F661C53DCC6036 = {
+			isa = PBXGroup;
+			children = (
+				D5BB5ED9D1DE0A6C4FBE16BB /* ToyCam */,
+				5B4247FFACE50CCF4ABE10B0 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		5B4247FFACE50CCF4ABE10B0 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				52ADC64623085A4D18B28CAE /* ToyCam.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		D5BB5ED9D1DE0A6C4FBE16BB /* ToyCam */ = {
+			isa = PBXGroup;
+			children = (
+				758F7DA4F0FB1BBBC5E9D3AE /* CameraManager.swift */,
+				6275520B7CC2D470111EE412 /* ContentView.swift */,
+				DFF47C6155C405C233208D72 /* Info.plist */,
+				D97D2C8559E0090D2449C0AB /* MetalCameraView.swift */,
+				D14490D8F89D7BF5965C93EA /* PixelParams.swift */,
+				0D31103C4098E3C9FBE6EDA6 /* Renderer.swift */,
+				FF0F4A40A07F7E05CDAF1211 /* Shaders.metal */,
+				FE41F6960368C6CDB4A89E4C /* ToyCamApp.swift */,
+			);
+			path = ToyCam;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		355D77D655806027D3B0EE90 /* ToyCam */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8D20D5AEAE2A887E3C7FB864 /* Build configuration list for PBXNativeTarget "ToyCam" */;
+			buildPhases = (
+				64B8FA5BD5A1E406143D4042 /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ToyCam;
+			packageProductDependencies = (
+			);
+			productName = ToyCam;
+			productReference = 52ADC64623085A4D18B28CAE /* ToyCam.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		E110D361AAB08BA6ED59CD23 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = YES;
+				LastUpgradeCheck = 1430;
+			};
+			buildConfigurationList = 749A0CBAB181C86237ACF0A4 /* Build configuration list for PBXProject "ToyCam" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				Base,
+				en,
+			);
+			mainGroup = 21583F0B38F661C53DCC6036;
+			minimizedProjectReferenceProxies = 1;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				355D77D655806027D3B0EE90 /* ToyCam */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		64B8FA5BD5A1E406143D4042 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D7782FDF4A8937B59458D8BD /* CameraManager.swift in Sources */,
+				707F2E835E1F85262017ACDC /* ContentView.swift in Sources */,
+				8D486AE7F723C0ED2D749BFC /* MetalCameraView.swift in Sources */,
+				0D9DA2308ACCA5BE3F9149FC /* PixelParams.swift in Sources */,
+				FFED313EDC5EE0798298B274 /* Renderer.swift in Sources */,
+				8B291E9C399DB04A6DBD3B81 /* Shaders.metal in Sources */,
+				63A3368100F45DC4909023A5 /* ToyCamApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		8CEBEA50CAD5E2FC998FAC2B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = "";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"DEBUG=1",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				GENERATE_INFOPLIST_FILE = NO;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MARKETING_VERSION = 1.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		B661C979FB3FC9303CB81262 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = "";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				GENERATE_INFOPLIST_FILE = NO;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MARKETING_VERSION = 1.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+		BE117A6CFC19DE2A58AD790C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				DEVELOPMENT_TEAM = RP5GZ99V95;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = ToyCam/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.toycam.app;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		C52A9355D720376F836EAFF9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				DEVELOPMENT_TEAM = RP5GZ99V95;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = ToyCam/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.toycam.app;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		749A0CBAB181C86237ACF0A4 /* Build configuration list for PBXProject "ToyCam" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8CEBEA50CAD5E2FC998FAC2B /* Debug */,
+				B661C979FB3FC9303CB81262 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		8D20D5AEAE2A887E3C7FB864 /* Build configuration list for PBXNativeTarget "ToyCam" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C52A9355D720376F836EAFF9 /* Debug */,
+				BE117A6CFC19DE2A58AD790C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = E110D361AAB08BA6ED59CD23 /* Project object */;
+}

@@ -26,6 +26,10 @@
 	</array>
 	<key>UIStatusBarHidden</key>
 	<true/>
+	<key>UIAppFonts</key>
+	<array>
+		<string>PressStart2P-Regular.ttf</string>
+	</array>
 	<key>NSCameraUsageDescription</key>
 	<string>토이카메라 실시간 미리보기를 위해 카메라를 사용합니다.</string>
 	<key>NSPhotoLibraryAddUsageDescription</key>

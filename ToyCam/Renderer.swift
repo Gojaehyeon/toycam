@@ -1,5 +1,6 @@
 import MetalKit
 import CoreVideo
+import CoreMedia
 import UIKit
 
 /// 카메라 텍스처를 셰이더로 처리해 MTKView에 그리고, 촬영 시 UIImage로 추출한다.
@@ -16,6 +17,10 @@ final class Renderer: NSObject, MTKViewDelegate {
 
     var uniforms = Uniforms()
     private var drawableSize = CGSize(width: 1, height: 1)
+
+    private let recorderLock = NSLock()
+    private var recorder: VideoRecorder?
+    private let recordingSize = CGSize(width: 960, height: 720) // 4:3 가로
 
     init?(mtkView: MTKView) {
         guard let device = mtkView.device ?? MTLCreateSystemDefaultDevice(),
@@ -46,8 +51,8 @@ final class Renderer: NSObject, MTKViewDelegate {
         CVMetalTextureCacheCreate(kCFAllocatorDefault, nil, device, nil, &textureCache)
     }
 
-    /// 카메라 프레임을 Metal 텍스처로 변환해 보관 (카메라 큐에서 호출).
-    func update(pixelBuffer: CVPixelBuffer) {
+    /// 카메라 프레임을 Metal 텍스처로 변환해 보관하고, 녹화 중이면 처리 프레임을 기록 (카메라 큐에서 호출).
+    func update(pixelBuffer: CVPixelBuffer, time: CMTime) {
         let width = CVPixelBufferGetWidth(pixelBuffer)
         let height = CVPixelBufferGetHeight(pixelBuffer)
         var cvTexture: CVMetalTexture?
@@ -56,11 +61,77 @@ final class Renderer: NSObject, MTKViewDelegate {
             .bgra8Unorm, width, height, 0, &cvTexture)
         guard status == kCVReturnSuccess,
               let cvTexture, let texture = CVMetalTextureGetTexture(cvTexture) else { return }
+        let aspect = Float(width) / Float(height)
 
         lock.lock()
         currentTexture = texture
-        texAspect = Float(width) / Float(height)
+        texAspect = aspect
         lock.unlock()
+
+        recorderLock.lock()
+        let rec = recorder
+        recorderLock.unlock()
+        if let rec, let pool = rec.pixelBufferPool {
+            recordFrame(cameraTexture: texture, texAspect: aspect, pool: pool, recorder: rec, time: time)
+        }
+    }
+
+    // MARK: 녹화
+
+    func startRecording() {
+        let rec = VideoRecorder(size: recordingSize)
+        rec.start()
+        recorderLock.lock()
+        recorder = rec
+        recorderLock.unlock()
+    }
+
+    func stopRecording(completion: @escaping (URL?) -> Void) {
+        recorderLock.lock()
+        let rec = recorder
+        recorder = nil
+        recorderLock.unlock()
+        guard let rec else { completion(nil); return }
+        rec.finish(completion: completion)
+    }
+
+    private func recordFrame(cameraTexture: MTLTexture, texAspect ta: Float,
+                             pool: CVPixelBufferPool, recorder rec: VideoRecorder, time: CMTime) {
+        var dst: CVPixelBuffer?
+        guard CVPixelBufferPoolCreatePixelBuffer(kCFAllocatorDefault, pool, &dst) == kCVReturnSuccess,
+              let dst else { return }
+        let w = CVPixelBufferGetWidth(dst)
+        let h = CVPixelBufferGetHeight(dst)
+
+        var cvt: CVMetalTexture?
+        guard CVMetalTextureCacheCreateTextureFromImage(
+                kCFAllocatorDefault, textureCache, dst, nil,
+                .bgra8Unorm, w, h, 0, &cvt) == kCVReturnSuccess,
+              let cvt, let target = CVMetalTextureGetTexture(cvt) else { return }
+
+        let rpd = MTLRenderPassDescriptor()
+        rpd.colorAttachments[0].texture = target
+        rpd.colorAttachments[0].loadAction = .clear
+        rpd.colorAttachments[0].clearColor = MTLClearColor(red: 0, green: 0, blue: 0, alpha: 1)
+        rpd.colorAttachments[0].storeAction = .store
+
+        var u = uniforms
+        u.resX = Float(w); u.resY = Float(h)
+        u.texAspect = ta
+        u.viewAspect = Float(w) / Float(h)
+
+        guard let cb = commandQueue.makeCommandBuffer(),
+              let enc = cb.makeRenderCommandEncoder(descriptor: rpd) else { return }
+        enc.setRenderPipelineState(pipeline)
+        enc.setFragmentTexture(cameraTexture, index: 0)
+        enc.setFragmentSamplerState(sampler, index: 0)
+        enc.setFragmentBytes(&u, length: MemoryLayout<Uniforms>.stride, index: 0)
+        enc.drawPrimitives(type: .triangle, vertexStart: 0, vertexCount: 3)
+        enc.endEncoding()
+        cb.commit()
+        cb.waitUntilCompleted()
+
+        rec.append(dst, at: time)
     }
 
     // MARK: MTKViewDelegate

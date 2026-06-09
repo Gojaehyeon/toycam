@@ -8,19 +8,29 @@
 
 /* Begin PBXBuildFile section */
 		0D9DA2308ACCA5BE3F9149FC /* PixelParams.swift in Sources */ = {isa = PBXBuildFile; fileRef = D14490D8F89D7BF5965C93EA /* PixelParams.swift */; };
+		2DC1148694E4B9BD29655A23 /* PressStart2P-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 884E7C81106FFB3C06ADAECC /* PressStart2P-Regular.ttf */; };
+		34C4D9EAB7FC5CD93B5A8886 /* wheel_tick.wav in Resources */ = {isa = PBXBuildFile; fileRef = 2735ABEC9C74E5772BCA8DCB /* wheel_tick.wav */; };
 		63A3368100F45DC4909023A5 /* ToyCamApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE41F6960368C6CDB4A89E4C /* ToyCamApp.swift */; };
 		707F2E835E1F85262017ACDC /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6275520B7CC2D470111EE412 /* ContentView.swift */; };
+		8A8629D7E48B2B34DA66DB8D /* Gallery.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2F735379F447C0A22C4EC73 /* Gallery.swift */; };
 		8B291E9C399DB04A6DBD3B81 /* Shaders.metal in Sources */ = {isa = PBXBuildFile; fileRef = FF0F4A40A07F7E05CDAF1211 /* Shaders.metal */; };
 		8D486AE7F723C0ED2D749BFC /* MetalCameraView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D97D2C8559E0090D2449C0AB /* MetalCameraView.swift */; };
+		D73A9777AEC770CDE70AFF51 /* VideoRecorder.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2AB3BBC65DAED310E183B86 /* VideoRecorder.swift */; };
 		D7782FDF4A8937B59458D8BD /* CameraManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 758F7DA4F0FB1BBBC5E9D3AE /* CameraManager.swift */; };
+		F602682F4681111C93F93221 /* shutter.wav in Resources */ = {isa = PBXBuildFile; fileRef = 3AD62E13DA7C5FDEFF9C62C1 /* shutter.wav */; };
 		FFED313EDC5EE0798298B274 /* Renderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D31103C4098E3C9FBE6EDA6 /* Renderer.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		0D31103C4098E3C9FBE6EDA6 /* Renderer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Renderer.swift; sourceTree = "<group>"; };
+		2735ABEC9C74E5772BCA8DCB /* wheel_tick.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = wheel_tick.wav; sourceTree = "<group>"; };
+		3AD62E13DA7C5FDEFF9C62C1 /* shutter.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = shutter.wav; sourceTree = "<group>"; };
 		52ADC64623085A4D18B28CAE /* ToyCam.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ToyCam.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6275520B7CC2D470111EE412 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		758F7DA4F0FB1BBBC5E9D3AE /* CameraManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraManager.swift; sourceTree = "<group>"; };
+		884E7C81106FFB3C06ADAECC /* PressStart2P-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "PressStart2P-Regular.ttf"; sourceTree = "<group>"; };
+		A2F735379F447C0A22C4EC73 /* Gallery.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Gallery.swift; sourceTree = "<group>"; };
+		C2AB3BBC65DAED310E183B86 /* VideoRecorder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoRecorder.swift; sourceTree = "<group>"; };
 		D14490D8F89D7BF5965C93EA /* PixelParams.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PixelParams.swift; sourceTree = "<group>"; };
 		D97D2C8559E0090D2449C0AB /* MetalCameraView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MetalCameraView.swift; sourceTree = "<group>"; };
 		DFF47C6155C405C233208D72 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
@@ -29,6 +39,14 @@
 /* End PBXFileReference section */
 
 /* Begin PBXGroup section */
+		15148CE0941885CA8B05D398 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				884E7C81106FFB3C06ADAECC /* PressStart2P-Regular.ttf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
 		21583F0B38F661C53DCC6036 = {
 			isa = PBXGroup;
 			children = (
@@ -45,17 +63,30 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		D544DFC51C1886D91ED41EF7 /* Sounds */ = {
+			isa = PBXGroup;
+			children = (
+				3AD62E13DA7C5FDEFF9C62C1 /* shutter.wav */,
+				2735ABEC9C74E5772BCA8DCB /* wheel_tick.wav */,
+			);
+			path = Sounds;
+			sourceTree = "<group>";
+		};
 		D5BB5ED9D1DE0A6C4FBE16BB /* ToyCam */ = {
 			isa = PBXGroup;
 			children = (
 				758F7DA4F0FB1BBBC5E9D3AE /* CameraManager.swift */,
 				6275520B7CC2D470111EE412 /* ContentView.swift */,
+				A2F735379F447C0A22C4EC73 /* Gallery.swift */,
 				DFF47C6155C405C233208D72 /* Info.plist */,
 				D97D2C8559E0090D2449C0AB /* MetalCameraView.swift */,
 				D14490D8F89D7BF5965C93EA /* PixelParams.swift */,
 				0D31103C4098E3C9FBE6EDA6 /* Renderer.swift */,
 				FF0F4A40A07F7E05CDAF1211 /* Shaders.metal */,
 				FE41F6960368C6CDB4A89E4C /* ToyCamApp.swift */,
+				C2AB3BBC65DAED310E183B86 /* VideoRecorder.swift */,
+				15148CE0941885CA8B05D398 /* Fonts */,
+				D544DFC51C1886D91ED41EF7 /* Sounds */,
 			);
 			path = ToyCam;
 			sourceTree = "<group>";
@@ -68,6 +99,7 @@
 			buildConfigurationList = 8D20D5AEAE2A887E3C7FB864 /* Build configuration list for PBXNativeTarget "ToyCam" */;
 			buildPhases = (
 				64B8FA5BD5A1E406143D4042 /* Sources */,
+				45CB758A02A49FBF0B08B1F3 /* Resources */,
 			);
 			buildRules = (
 			);
@@ -107,6 +139,19 @@
 		};
 /* End PBXProject section */
 
+/* Begin PBXResourcesBuildPhase section */
+		45CB758A02A49FBF0B08B1F3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2DC1148694E4B9BD29655A23 /* PressStart2P-Regular.ttf in Resources */,
+				F602682F4681111C93F93221 /* shutter.wav in Resources */,
+				34C4D9EAB7FC5CD93B5A8886 /* wheel_tick.wav in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		64B8FA5BD5A1E406143D4042 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -114,11 +159,13 @@
 			files = (
 				D7782FDF4A8937B59458D8BD /* CameraManager.swift in Sources */,
 				707F2E835E1F85262017ACDC /* ContentView.swift in Sources */,
+				8A8629D7E48B2B34DA66DB8D /* Gallery.swift in Sources */,
 				8D486AE7F723C0ED2D749BFC /* MetalCameraView.swift in Sources */,
 				0D9DA2308ACCA5BE3F9149FC /* PixelParams.swift in Sources */,
 				FFED313EDC5EE0798298B274 /* Renderer.swift in Sources */,
 				8B291E9C399DB04A6DBD3B81 /* Shaders.metal in Sources */,
 				63A3368100F45DC4909023A5 /* ToyCamApp.swift in Sources */,
+				D73A9777AEC770CDE70AFF51 /* VideoRecorder.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -186,6 +233,9 @@
 				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
@@ -247,6 +297,9 @@
 				MTL_FAST_MATH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
 				SWIFT_VERSION = 5.0;
@@ -268,7 +321,10 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.toycam.app;
 				SDKROOT = iphoneos;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -286,7 +342,10 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.toycam.app;
 				SDKROOT = iphoneos;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};

@@ -10,6 +10,8 @@ struct Uniforms {
     float contrast;
     float vignette;
     float grayscale;
+    float greenScreen;
+    float zoom;
     float resX;
     float resY;
     float texAspect;
@@ -65,6 +67,10 @@ fragment float4 frag(VOut in [[stage_in]],
     }
     uv = (uv - 0.5) * scale + 0.5;
 
+    // --- 디지털 줌 (중앙 확대) ---
+    float zoom = max(u.zoom, 1.0);
+    uv = (uv - 0.5) / zoom + 0.5;
+
     // --- 픽셀화 ---
     float2 res = float2(max(u.resX, 1.0), max(u.resY, 1.0));
     float gridPx = max(u.pixelSize, 1.0);
@@ -89,6 +95,14 @@ fragment float4 frag(VOut in [[stage_in]],
     col += threshold * (u.ditherStrength / (levels - 1.0));
     col = floor(col * (levels - 1.0) + 0.5) / (levels - 1.0);
     col = clamp(col, 0.0, 1.0);
+
+    // --- 게임보이 그린 LCD 팔레트 ---
+    if (u.greenScreen > 0.5) {
+        float t = dot(col, float3(0.299, 0.587, 0.114));
+        float3 darkGreen  = float3(0.055, 0.18, 0.055);  // #0f2e0f 근처
+        float3 lightGreen = float3(0.55, 0.74, 0.06);    // #8bbc0f 근처
+        col = mix(darkGreen, lightGreen, t);
+    }
 
     // --- 비네팅 ---
     float2 d = in.uv - 0.5;

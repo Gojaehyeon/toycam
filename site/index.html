@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>TOYCAM — 아이폰을 레트로 토이카메라로</title>
+<meta name="description" content="클릭휠로 필터를 돌리고, 필름을 아껴 찍는 레트로 토이카메라. 24가지 픽셀아트 필터, 구독 없음.">
+<meta property="og:title" content="TOYCAM — 아이폰을 레트로 토이카메라로">
+<meta property="og:description" content="클릭휠로 필터를 돌리고, 필름을 아껴 찍는 레트로 토이카메라. 24가지 픽셀아트 필터, 구독 없음.">
+<meta property="og:image" content="https://toycam.gojaehyun.com/assets/cam.png">
+<meta property="og:url" content="https://toycam.gojaehyun.com">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='18' fill='%232B2B2E'/><rect x='18' y='24' width='64' height='44' rx='6' fill='%238FBD1A'/><circle cx='50' cy='46' r='12' fill='%232B2B2E'/><rect x='40' y='76' width='20' height='8' rx='4' fill='%238FBD1A'/></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/galmuri@latest/dist/galmuri.css" rel="stylesheet">
+<style>
+:root {
+  --cream: #DEDDD1; --cream-hi: #F2F1EC; --cream-lo: #B8B7AB;
+  --bezel: #2B2B2E; --glass: #0D1A0D; --green: #8FBD1A; --green-dim: #4D7319;
+  --red: #DB2921; --ink: #3A3A3E;
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { background: var(--cream); color: var(--ink);
+       font-family: "Galmuri11", -apple-system, sans-serif; line-height: 1.8; }
+.px { font-family: "Press Start 2P", "Galmuri11", monospace; }
+.wrap { max-width: 960px; margin: 0 auto; padding: 0 20px; }
+
+/* 헤더 = 검정 STATUS 바 */
+header { background: #000; color: var(--green); padding: 14px 0; }
+header .wrap { display: flex; justify-content: space-between; align-items: center; }
+header .logo { font-size: 14px; letter-spacing: 2px; }
+header .stat { font-size: 9px; opacity: .85; }
+
+/* 히어로 = 그린 LCD */
+.hero { background: var(--glass); padding: 64px 0 72px;
+        border-bottom: 10px solid var(--bezel); }
+.hero .wrap { display: flex; gap: 48px; align-items: center; flex-wrap: wrap; justify-content: center; }
+.hero .copy { max-width: 420px; }
+.hero h1 { font-size: clamp(34px, 7vw, 56px); color: var(--green);
+           letter-spacing: 4px; margin-bottom: 18px;
+           text-shadow: 0 0 18px rgba(143,189,26,.35); }
+.hero p.tag { color: var(--green); font-size: 17px; margin-bottom: 8px; }
+.hero p.sub { color: #6f9c2f; font-size: 13px; margin-bottom: 28px; }
+.btns { display: flex; gap: 12px; flex-wrap: wrap; }
+.btn { display: inline-block; padding: 14px 22px; font-size: 11px;
+       text-decoration: none; border-radius: 10px; }
+.btn-primary { background: var(--green); color: var(--glass); font-weight: 700;
+               box-shadow: 0 4px 0 var(--green-dim); }
+.btn-ghost { color: var(--green); border: 2px solid var(--green); }
+.btn:active { transform: translateY(2px); box-shadow: none; }
+
+.shot { width: 270px; border-radius: 28px; border: 6px solid #1c1c1f;
+        box-shadow: 0 24px 60px rgba(0,0,0,.5); display: block; }
+
+/* 기능 카드 */
+.features { padding: 72px 0; }
+h2.sec { font-size: 18px; text-align: center; margin-bottom: 10px; letter-spacing: 2px; }
+p.sec-sub { text-align: center; color: #7a796f; margin-bottom: 44px; font-size: 14px; }
+.grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 16px; }
+.card { background: var(--cream-hi); border-radius: 18px; padding: 26px 24px;
+        box-shadow: 0 4px 14px rgba(0,0,0,.08), inset 0 1px 0 #fff; }
+.card .ico { font-size: 26px; display: block; margin-bottom: 12px; }
+.card h3 { font-size: 15px; margin-bottom: 8px; }
+.card p { font-size: 13px; color: #6c6b62; }
+.card .en { display:block; font-size: 8px; color: var(--green-dim); margin-top: 10px; letter-spacing: 1px; }
+
+/* 스크린샷 */
+.shots { background: var(--bezel); padding: 72px 0; }
+.shots h2 { color: var(--green); }
+.shots p.sec-sub { color: #9a9990; }
+.shots .row { display: flex; gap: 28px; justify-content: center; flex-wrap: wrap; }
+.shots img { width: 240px; border-radius: 24px; border: 5px solid #151517;
+             box-shadow: 0 18px 44px rgba(0,0,0,.55); }
+.shots figcaption { text-align: center; color: var(--cream-lo); font-size: 12px; margin-top: 12px; }
+
+/* PRO 카트리지 */
+.pro { padding: 80px 0; text-align: center; }
+.cart { width: 150px; margin: 0 auto 26px; }
+.cart .top { width: 74px; height: 12px; background: var(--bezel); border-radius: 4px; margin: 0 auto; }
+.cart .body { background: linear-gradient(#3a3a3e, #232326); border-radius: 12px;
+              padding: 16px 14px; box-shadow: 0 14px 30px rgba(0,0,0,.35); }
+.cart .groove { height: 4px; background: rgba(0,0,0,.4); border-radius: 2px; margin: 4px 14px; }
+.cart .label { background: var(--green); border-radius: 8px; margin-top: 10px;
+               padding: 16px 8px; color: var(--glass); }
+.cart .label .t1 { font-size: 12px; }
+.cart .label .t2 { font-size: 8px; margin-top: 6px; }
+.pro h2 { font-size: 20px; margin-bottom: 12px; }
+.pro .price { font-size: 30px; color: var(--green-dim); margin: 16px 0 6px; }
+.pro .once { font-size: 14px; color: #7a796f; margin-bottom: 26px; }
+.pro ul { list-style: none; display: inline-block; text-align: left; font-size: 14px; }
+.pro li { padding: 5px 0; }
+.pro li::before { content: "✓ "; color: var(--green-dim); font-weight: 700; }
+
+footer { background: #000; color: #8a8a82; padding: 34px 0; font-size: 12px; }
+footer .wrap { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 12px; }
+footer a { color: var(--green); text-decoration: none; }
+@media (max-width: 640px) { .hero .copy { text-align: center; } .btns { justify-content: center; } }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <span class="px logo">▣ TOYCAM</span>
+    <span class="px stat">FILM 24 · 100%</span>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="wrap">
+    <div class="copy">
+      <h1 class="px">TOYCAM</h1>
+      <p class="tag">아이폰을 레트로 토이카메라로.</p>
+      <p class="sub">클릭휠로 필터를 돌리고, 필름을 아껴 찍는 진짜 장난감 같은 카메라.</p>
+      <div class="btns">
+        <a class="btn btn-primary px" href="#pro">App Store — Coming Soon</a>
+        <a class="btn btn-ghost px" href="https://github.com/Gojaehyeon/toycam">GitHub</a>
+      </div>
+    </div>
+    <img class="shot" src="assets/cam.png" alt="ToyCam 카메라 화면 — 그린 LCD와 클릭휠">
+  </div>
+</section>
+
+<section class="features">
+  <div class="wrap">
+    <h2 class="sec px">HOW IT FEELS</h2>
+    <p class="sec-sub">화면 속에 진짜 레트로 카메라 한 대가 들어 있어요.</p>
+    <div class="grid">
+      <div class="card"><span class="ico">🎞️</span><h3>픽셀아트 필터 24종</h3>
+        <p>게임보이 그린부터 열화상, 패미컴 8색 팔레트까지. 실시간 Metal 셰이더로 60fps.</p>
+        <span class="px en">24 REAL-TIME FILTERS</span></div>
+      <div class="card"><span class="ico">⊙</span><h3>아이팟 클릭휠</h3>
+        <p>휠을 돌리면 또각또각 진동·사운드와 함께 필터가 넘어가요. 가운데 버튼이 셔터.</p>
+        <span class="px en">CLICK WHEEL SHUTTER</span></div>
+      <div class="card"><span class="ico">📼</span><h3>무료 필름 한 롤</h3>
+        <p>무료로 24장. 필름이 줄어드는 만큼 한 장 한 장이 소중해집니다.</p>
+        <span class="px en">FREE ROLL: 24 SHOTS</span></div>
+      <div class="card"><span class="ico">📹</span><h3>동영상도 픽셀아트</h3>
+        <p>셔터를 길게 누르면 필터가 적용된 영상이 그대로 녹화돼요.</p>
+        <span class="px en">PIXEL VIDEO REC</span></div>
+      <div class="card"><span class="ico">🖼️</span><h3>찍어둔 사진 변환</h3>
+        <p>라이브러리의 사진을 불러와 토이카메라 필터를 입힐 수 있어요.</p>
+        <span class="px en">IMPORT &amp; CONVERT</span></div>
+      <div class="card"><span class="ico">🔒</span><h3>전부 기기 안에서</h3>
+        <p>분석도 광고도 서버도 없음. 사진은 당신의 아이폰을 떠나지 않습니다.</p>
+        <span class="px en">NO TRACKING. EVER.</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="shots">
+  <div class="wrap">
+    <h2 class="sec px">SCREENS</h2>
+    <p class="sec-sub">그린 LCD · 앨범 · PRO 카트리지</p>
+    <div class="row">
+      <figure><img src="assets/cam.png" alt="카메라 화면"><figcaption>도트 뷰파인더</figcaption></figure>
+      <figure><img src="assets/album.png" alt="앨범 화면"><figcaption>LCD 속 앨범</figcaption></figure>
+      <figure><img src="assets/paywall.png" alt="PRO 카트리지"><figcaption>PRO 카트리지</figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<section class="pro" id="pro">
+  <div class="wrap">
+    <div class="cart">
+      <div class="top"></div>
+      <div class="body">
+        <div class="groove"></div><div class="groove"></div><div class="groove"></div>
+        <div class="label px"><div class="t1">TOYCAM</div><div class="t2">PRO</div></div>
+      </div>
+    </div>
+    <h2>PRO 카트리지</h2>
+    <p class="price px">$3.99</p>
+    <p class="once">구독 없음 · 한 번 구매하면 평생 내 것</p>
+    <ul>
+      <li>숨겨진 필터 20종 해제 (총 24종)</li>
+      <li>촬영 무제한</li>
+      <li>사진 불러오기 무제한</li>
+      <li>앞으로 추가되는 필터도 전부</li>
+    </ul>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <span>© 2026 TNT Labs · <a href="mailto:tntlabgo@gmail.com">tntlabgo@gmail.com</a></span>
+    <span><a href="privacy.html">개인정보처리방침</a> · <a href="https://github.com/Gojaehyeon/toycam">GitHub</a></span>
+  </div>
+</footer>
+
+</body>
+</html>

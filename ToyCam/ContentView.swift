@@ -888,6 +888,13 @@ struct ContentView: View {
         .onAppear {
             restoreLastFilter()
             loadStoredShots()
+            // 스크린샷/테스트용 숨김 런치 인자
+            if CommandLine.arguments.contains("-startAlbum") {
+                hub.albumMode = true
+            }
+            if CommandLine.arguments.contains("-showPaywall") {
+                hub.showPaywall = true
+            }
         }
     }
 

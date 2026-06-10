@@ -1,0 +1,28 @@
+{
+  "sourceLanguage" : "ko",
+  "strings" : {
+    "NSCameraUsageDescription" : {
+      "localizations" : {
+        "ko" : { "stringUnit" : { "state" : "translated", "value" : "토이카메라 실시간 미리보기를 위해 카메라를 사용합니다." } },
+        "en" : { "stringUnit" : { "state" : "translated", "value" : "ToyCam uses the camera for the live retro viewfinder." } },
+        "ja" : { "stringUnit" : { "state" : "translated", "value" : "レトロなライブビューのためにカメラを使用します。" } },
+        "zh-Hans" : { "stringUnit" : { "state" : "translated", "value" : "相机用于实时复古取景器。" } },
+        "de" : { "stringUnit" : { "state" : "translated", "value" : "Die Kamera wird für den Retro-Live-Sucher verwendet." } },
+        "es" : { "stringUnit" : { "state" : "translated", "value" : "La cámara se usa para el visor retro en vivo." } },
+        "fr" : { "stringUnit" : { "state" : "translated", "value" : "L’appareil photo est utilisé pour le viseur rétro en direct." } }
+      }
+    },
+    "NSPhotoLibraryAddUsageDescription" : {
+      "localizations" : {
+        "ko" : { "stringUnit" : { "state" : "translated", "value" : "촬영한 픽셀아트 사진을 저장하기 위해 사진 라이브러리에 접근합니다." } },
+        "en" : { "stringUnit" : { "state" : "translated", "value" : "Saves your pixel-art photos and videos to your photo library." } },
+        "ja" : { "stringUnit" : { "state" : "translated", "value" : "撮影したピクセルアート写真を保存するためにフォトライブラリへ追加します。" } },
+        "zh-Hans" : { "stringUnit" : { "state" : "translated", "value" : "将拍摄的像素风照片保存到照片图库。" } },
+        "de" : { "stringUnit" : { "state" : "translated", "value" : "Speichert deine Pixel-Art-Fotos und -Videos in deiner Fotomediathek." } },
+        "es" : { "stringUnit" : { "state" : "translated", "value" : "Guarda tus fotos y vídeos de pixel art en tu fototeca." } },
+        "fr" : { "stringUnit" : { "state" : "translated", "value" : "Enregistre vos photos et vidéos pixel art dans votre photothèque." } }
+      }
+    }
+  },
+  "version" : "1.0"
+}

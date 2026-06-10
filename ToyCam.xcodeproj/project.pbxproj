@@ -3,37 +3,54 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 63;
+	objectVersion = 77;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0C9DB00BDBA448FA96BCDEA1 /* button.wav in Resources */ = {isa = PBXBuildFile; fileRef = 1FCC8D44479E038A591AB04D /* button.wav */; };
 		0D9DA2308ACCA5BE3F9149FC /* PixelParams.swift in Sources */ = {isa = PBXBuildFile; fileRef = D14490D8F89D7BF5965C93EA /* PixelParams.swift */; };
+		27C89A17B36F3635F293E54D /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = E1849D7CEB2F0659027EB3C8 /* Localizable.xcstrings */; };
 		2DC1148694E4B9BD29655A23 /* PressStart2P-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 884E7C81106FFB3C06ADAECC /* PressStart2P-Regular.ttf */; };
 		34C4D9EAB7FC5CD93B5A8886 /* wheel_tick.wav in Resources */ = {isa = PBXBuildFile; fileRef = 2735ABEC9C74E5772BCA8DCB /* wheel_tick.wav */; };
+		4BF5790350049AB571CBDEEF /* ShotStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 142A3463D5D69C8BF3A34573 /* ShotStore.swift */; };
 		63A3368100F45DC4909023A5 /* ToyCamApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE41F6960368C6CDB4A89E4C /* ToyCamApp.swift */; };
+		6AB3AFE00FA74CF6AA80937A /* ProStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = A00225C7FCD6976A2DC9C8B1 /* ProStore.swift */; };
 		707F2E835E1F85262017ACDC /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6275520B7CC2D470111EE412 /* ContentView.swift */; };
+		7552537C50BCC977551BF978 /* AppIcon.icon in Resources */ = {isa = PBXBuildFile; fileRef = 5084CE86A0E9089F0F75A2B5 /* AppIcon.icon */; };
 		8A8629D7E48B2B34DA66DB8D /* Gallery.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2F735379F447C0A22C4EC73 /* Gallery.swift */; };
 		8B291E9C399DB04A6DBD3B81 /* Shaders.metal in Sources */ = {isa = PBXBuildFile; fileRef = FF0F4A40A07F7E05CDAF1211 /* Shaders.metal */; };
 		8D486AE7F723C0ED2D749BFC /* MetalCameraView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D97D2C8559E0090D2449C0AB /* MetalCameraView.swift */; };
+		8F4BC0CF31F3D47B96F5B681 /* image 301.png in Resources */ = {isa = PBXBuildFile; fileRef = 3B0B9B41BB540F7C6FDBFC82 /* image 301.png */; };
+		AE379C96401326F57E45CD7F /* InfoPlist.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 118514E483CDFAC6F8FE2228 /* InfoPlist.xcstrings */; };
 		D73A9777AEC770CDE70AFF51 /* VideoRecorder.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2AB3BBC65DAED310E183B86 /* VideoRecorder.swift */; };
 		D7782FDF4A8937B59458D8BD /* CameraManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 758F7DA4F0FB1BBBC5E9D3AE /* CameraManager.swift */; };
+		E2DB191FAA310D1237C058ED /* icon.json in Resources */ = {isa = PBXBuildFile; fileRef = 380B86CD11708176E5C710D6 /* icon.json */; };
 		F602682F4681111C93F93221 /* shutter.wav in Resources */ = {isa = PBXBuildFile; fileRef = 3AD62E13DA7C5FDEFF9C62C1 /* shutter.wav */; };
 		FFED313EDC5EE0798298B274 /* Renderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D31103C4098E3C9FBE6EDA6 /* Renderer.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		0D31103C4098E3C9FBE6EDA6 /* Renderer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Renderer.swift; sourceTree = "<group>"; };
+		118514E483CDFAC6F8FE2228 /* InfoPlist.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = InfoPlist.xcstrings; sourceTree = "<group>"; };
+		142A3463D5D69C8BF3A34573 /* ShotStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShotStore.swift; sourceTree = "<group>"; };
+		1FCC8D44479E038A591AB04D /* button.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = button.wav; sourceTree = "<group>"; };
 		2735ABEC9C74E5772BCA8DCB /* wheel_tick.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = wheel_tick.wav; sourceTree = "<group>"; };
+		380B86CD11708176E5C710D6 /* icon.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = icon.json; sourceTree = "<group>"; };
 		3AD62E13DA7C5FDEFF9C62C1 /* shutter.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = shutter.wav; sourceTree = "<group>"; };
-		52ADC64623085A4D18B28CAE /* ToyCam.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ToyCam.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		3B0B9B41BB540F7C6FDBFC82 /* image 301.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "image 301.png"; sourceTree = "<group>"; };
+		5084CE86A0E9089F0F75A2B5 /* AppIcon.icon */ = {isa = PBXFileReference; path = AppIcon.icon; sourceTree = "<group>"; };
+		52ADC64623085A4D18B28CAE /* ToyCam.app */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.application; path = ToyCam.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6275520B7CC2D470111EE412 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		758F7DA4F0FB1BBBC5E9D3AE /* CameraManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraManager.swift; sourceTree = "<group>"; };
 		884E7C81106FFB3C06ADAECC /* PressStart2P-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "PressStart2P-Regular.ttf"; sourceTree = "<group>"; };
+		A00225C7FCD6976A2DC9C8B1 /* ProStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProStore.swift; sourceTree = "<group>"; };
 		A2F735379F447C0A22C4EC73 /* Gallery.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Gallery.swift; sourceTree = "<group>"; };
 		C2AB3BBC65DAED310E183B86 /* VideoRecorder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoRecorder.swift; sourceTree = "<group>"; };
 		D14490D8F89D7BF5965C93EA /* PixelParams.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PixelParams.swift; sourceTree = "<group>"; };
 		D97D2C8559E0090D2449C0AB /* MetalCameraView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MetalCameraView.swift; sourceTree = "<group>"; };
+		DA08ACDA0037A6946F38EC40 /* ToyCam.storekit */ = {isa = PBXFileReference; path = ToyCam.storekit; sourceTree = "<group>"; };
 		DFF47C6155C405C233208D72 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		E1849D7CEB2F0659027EB3C8 /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
 		FE41F6960368C6CDB4A89E4C /* ToyCamApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToyCamApp.swift; sourceTree = "<group>"; };
 		FF0F4A40A07F7E05CDAF1211 /* Shaders.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = Shaders.metal; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -50,6 +67,7 @@
 		21583F0B38F661C53DCC6036 = {
 			isa = PBXGroup;
 			children = (
+				DA08ACDA0037A6946F38EC40 /* ToyCam.storekit */,
 				D5BB5ED9D1DE0A6C4FBE16BB /* ToyCam */,
 				5B4247FFACE50CCF4ABE10B0 /* Products */,
 			);
@@ -66,6 +84,7 @@
 		D544DFC51C1886D91ED41EF7 /* Sounds */ = {
 			isa = PBXGroup;
 			children = (
+				1FCC8D44479E038A591AB04D /* button.wav */,
 				3AD62E13DA7C5FDEFF9C62C1 /* shutter.wav */,
 				2735ABEC9C74E5772BCA8DCB /* wheel_tick.wav */,
 			);
@@ -75,20 +94,43 @@
 		D5BB5ED9D1DE0A6C4FBE16BB /* ToyCam */ = {
 			isa = PBXGroup;
 			children = (
+				5084CE86A0E9089F0F75A2B5 /* AppIcon.icon */,
 				758F7DA4F0FB1BBBC5E9D3AE /* CameraManager.swift */,
 				6275520B7CC2D470111EE412 /* ContentView.swift */,
 				A2F735379F447C0A22C4EC73 /* Gallery.swift */,
 				DFF47C6155C405C233208D72 /* Info.plist */,
+				118514E483CDFAC6F8FE2228 /* InfoPlist.xcstrings */,
+				E1849D7CEB2F0659027EB3C8 /* Localizable.xcstrings */,
 				D97D2C8559E0090D2449C0AB /* MetalCameraView.swift */,
 				D14490D8F89D7BF5965C93EA /* PixelParams.swift */,
+				A00225C7FCD6976A2DC9C8B1 /* ProStore.swift */,
 				0D31103C4098E3C9FBE6EDA6 /* Renderer.swift */,
 				FF0F4A40A07F7E05CDAF1211 /* Shaders.metal */,
+				142A3463D5D69C8BF3A34573 /* ShotStore.swift */,
 				FE41F6960368C6CDB4A89E4C /* ToyCamApp.swift */,
 				C2AB3BBC65DAED310E183B86 /* VideoRecorder.swift */,
 				15148CE0941885CA8B05D398 /* Fonts */,
 				D544DFC51C1886D91ED41EF7 /* Sounds */,
+				D922E731F7D0379074948F88 /* toycam.icon */,
 			);
 			path = ToyCam;
+			sourceTree = "<group>";
+		};
+		D922E731F7D0379074948F88 /* toycam.icon */ = {
+			isa = PBXGroup;
+			children = (
+				380B86CD11708176E5C710D6 /* icon.json */,
+				FB36F3EE89432006774A9081 /* Assets */,
+			);
+			path = toycam.icon;
+			sourceTree = "<group>";
+		};
+		FB36F3EE89432006774A9081 /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				3B0B9B41BB540F7C6FDBFC82 /* image 301.png */,
+			);
+			path = Assets;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -120,17 +162,29 @@
 			attributes = {
 				BuildIndependentTargetsInParallel = YES;
 				LastUpgradeCheck = 1430;
+				TargetAttributes = {
+					355D77D655806027D3B0EE90 = {
+						DevelopmentTeam = "";
+					};
+				};
 			};
 			buildConfigurationList = 749A0CBAB181C86237ACF0A4 /* Build configuration list for PBXProject "ToyCam" */;
 			compatibilityVersion = "Xcode 14.0";
-			developmentRegion = en;
+			developmentRegion = ko;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				Base,
+				de,
 				en,
+				es,
+				fr,
+				ja,
+				ko,
+				"zh-Hans",
 			);
 			mainGroup = 21583F0B38F661C53DCC6036;
 			minimizedProjectReferenceProxies = 1;
+			preferredProjectObjectVersion = 77;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
@@ -144,7 +198,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7552537C50BCC977551BF978 /* AppIcon.icon in Resources */,
+				AE379C96401326F57E45CD7F /* InfoPlist.xcstrings in Resources */,
+				27C89A17B36F3635F293E54D /* Localizable.xcstrings in Resources */,
 				2DC1148694E4B9BD29655A23 /* PressStart2P-Regular.ttf in Resources */,
+				0C9DB00BDBA448FA96BCDEA1 /* button.wav in Resources */,
+				E2DB191FAA310D1237C058ED /* icon.json in Resources */,
+				8F4BC0CF31F3D47B96F5B681 /* image 301.png in Resources */,
 				F602682F4681111C93F93221 /* shutter.wav in Resources */,
 				34C4D9EAB7FC5CD93B5A8886 /* wheel_tick.wav in Resources */,
 			);
@@ -162,8 +222,10 @@
 				8A8629D7E48B2B34DA66DB8D /* Gallery.swift in Sources */,
 				8D486AE7F723C0ED2D749BFC /* MetalCameraView.swift in Sources */,
 				0D9DA2308ACCA5BE3F9149FC /* PixelParams.swift in Sources */,
+				6AB3AFE00FA74CF6AA80937A /* ProStore.swift in Sources */,
 				FFED313EDC5EE0798298B274 /* Renderer.swift in Sources */,
 				8B291E9C399DB04A6DBD3B81 /* Shaders.metal in Sources */,
+				4BF5790350049AB571CBDEEF /* ShotStore.swift in Sources */,
 				63A3368100F45DC4909023A5 /* ToyCamApp.swift in Sources */,
 				D73A9777AEC770CDE70AFF51 /* VideoRecorder.swift in Sources */,
 			);
@@ -312,7 +374,6 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				DEVELOPMENT_TEAM = RP5GZ99V95;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = ToyCam/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -333,7 +394,6 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				DEVELOPMENT_TEAM = RP5GZ99V95;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = ToyCam/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (

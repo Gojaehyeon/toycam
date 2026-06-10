@@ -1,0 +1,37 @@
+{
+  "identifier" : "B2C3D4E5-0000-4000-8000-000000000001",
+  "nonRenewingSubscriptions" : [],
+  "products" : [
+    {
+      "displayPrice" : "3.99",
+      "familyShareable" : false,
+      "internalID" : "3001",
+      "localizations" : [
+        {
+          "description" : "필터 24종·동영상·미세조정 평생 해제",
+          "displayName" : "PRO 카트리지",
+          "locale" : "ko_KR"
+        },
+        {
+          "description" : "All 24 filters, video & fine-tuning. Forever.",
+          "displayName" : "PRO Cartridge",
+          "locale" : "en_US"
+        }
+      ],
+      "productID" : "com.toycam.app.pro.lifetime",
+      "referenceName" : "ToyCam Pro Lifetime",
+      "type" : "NonConsumable"
+    }
+  ],
+  "settings" : {
+    "_failTransactionsEnabled" : false,
+    "_locale" : "en_US",
+    "_storefront" : "USA",
+    "_storeKitErrors" : []
+  },
+  "subscriptionGroups" : [],
+  "version" : {
+    "major" : 4,
+    "minor" : 0
+  }
+}

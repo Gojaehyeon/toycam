@@ -1,0 +1,156 @@
+{
+  "sourceLanguage" : "ko",
+  "strings" : {
+    "픽셀" : {
+      "localizations" : {
+        "en" : { "stringUnit" : { "state" : "translated", "value" : "Pixel" } },
+        "ja" : { "stringUnit" : { "state" : "translated", "value" : "ピクセル" } },
+        "zh-Hans" : { "stringUnit" : { "state" : "translated", "value" : "像素" } },
+        "de" : { "stringUnit" : { "state" : "translated", "value" : "Pixel" } },
+        "es" : { "stringUnit" : { "state" : "translated", "value" : "Píxel" } },
+        "fr" : { "stringUnit" : { "state" : "translated", "value" : "Pixel" } }
+      }
+    },
+    "색상" : {
+      "localizations" : {
+        "en" : { "stringUnit" : { "state" : "translated", "value" : "Colors" } },
+        "ja" : { "stringUnit" : { "state" : "translated", "value" : "色数" } },
+        "zh-Hans" : { "stringUnit" : { "state" : "translated", "value" : "色阶" } },
+        "de" : { "stringUnit" : { "state" : "translated", "value" : "Farben" } },
+        "es" : { "stringUnit" : { "state" : "translated", "value" : "Colores" } },
+        "fr" : { "stringUnit" : { "state" : "translated", "value" : "Couleurs" } }
+      }
+    },
+    "디더" : {
+      "localizations" : {
+        "en" : { "stringUnit" : { "state" : "translated", "value" : "Dither" } },
+        "ja" : { "stringUnit" : { "state" : "translated", "value" : "ディザ" } },
+        "zh-Hans" : { "stringUnit" : { "state" : "translated", "value" : "抖动" } },
+        "de" : { "stringUnit" : { "state" : "translated", "value" : "Dither" } },
+        "es" : { "stringUnit" : { "state" : "translated", "value" : "Tramado" } },
+        "fr" : { "stringUnit" : { "state" : "translated", "value" : "Tramage" } }
+      }
+    },
+    "대비" : {
+      "localizations" : {
+        "en" : { "stringUnit" : { "state" : "translated", "value" : "Contrast" } },
+        "ja" : { "stringUnit" : { "state" : "translated", "value" : "コントラスト" } },
+        "zh-Hans" : { "stringUnit" : { "state" : "translated", "value" : "对比度" } },
+        "de" : { "stringUnit" : { "state" : "translated", "value" : "Kontrast" } },
+        "es" : { "stringUnit" : { "state" : "translated", "value" : "Contraste" } },
+        "fr" : { "stringUnit" : { "state" : "translated", "value" : "Contraste" } }
+      }
+    },
+    "비네팅" : {
+      "localizations" : {
+        "en" : { "stringUnit" : { "state" : "translated", "value" : "Vignette" } },
+        "ja" : { "stringUnit" : { "state" : "translated", "value" : "ビネット" } },
+        "zh-Hans" : { "stringUnit" : { "state" : "translated", "value" : "暗角" } },
+        "de" : { "stringUnit" : { "state" : "translated", "value" : "Vignette" } },
+        "es" : { "stringUnit" : { "state" : "translated", "value" : "Viñeta" } },
+        "fr" : { "stringUnit" : { "state" : "translated", "value" : "Vignettage" } }
+      }
+    },
+    "흑백" : {
+      "localizations" : {
+        "en" : { "stringUnit" : { "state" : "translated", "value" : "B&W" } },
+        "ja" : { "stringUnit" : { "state" : "translated", "value" : "モノクロ" } },
+        "zh-Hans" : { "stringUnit" : { "state" : "translated", "value" : "黑白" } },
+        "de" : { "stringUnit" : { "state" : "translated", "value" : "S/W" } },
+        "es" : { "stringUnit" : { "state" : "translated", "value" : "B/N" } },
+        "fr" : { "stringUnit" : { "state" : "translated", "value" : "N&B" } }
+      }
+    },
+    "숨겨진 필터 20종 해제 (총 24종)" : {
+      "localizations" : {
+        "en" : { "stringUnit" : { "state" : "translated", "value" : "Unlock 20 hidden filters (24 total)" } },
+        "ja" : { "stringUnit" : { "state" : "translated", "value" : "隠しフィルター20種を解放（全24種）" } },
+        "zh-Hans" : { "stringUnit" : { "state" : "translated", "value" : "解锁 20 款隐藏滤镜（共 24 款）" } },
+        "de" : { "stringUnit" : { "state" : "translated", "value" : "20 versteckte Filter freischalten (24 insgesamt)" } },
+        "es" : { "stringUnit" : { "state" : "translated", "value" : "Desbloquea 20 filtros ocultos (24 en total)" } },
+        "fr" : { "stringUnit" : { "state" : "translated", "value" : "Débloquez 20 filtres cachés (24 au total)" } }
+      }
+    },
+    "촬영 무제한 (무료는 필름 24장)" : {
+      "localizations" : {
+        "en" : { "stringUnit" : { "state" : "translated", "value" : "Unlimited shots (free roll: 24)" } },
+        "ja" : { "stringUnit" : { "state" : "translated", "value" : "撮影無制限（無料はフィルム24枚）" } },
+        "zh-Hans" : { "stringUnit" : { "state" : "translated", "value" : "拍摄无限制（免费胶卷 24 张）" } },
+        "de" : { "stringUnit" : { "state" : "translated", "value" : "Unbegrenzt fotografieren (gratis: 24 Bilder)" } },
+        "es" : { "stringUnit" : { "state" : "translated", "value" : "Disparos ilimitados (gratis: 24 fotos)" } },
+        "fr" : { "stringUnit" : { "state" : "translated", "value" : "Photos illimitées (gratuit : 24 poses)" } }
+      }
+    },
+    "사진 불러오기 무제한" : {
+      "localizations" : {
+        "en" : { "stringUnit" : { "state" : "translated", "value" : "Unlimited photo import" } },
+        "ja" : { "stringUnit" : { "state" : "translated", "value" : "写真の読み込み無制限" } },
+        "zh-Hans" : { "stringUnit" : { "state" : "translated", "value" : "无限导入照片" } },
+        "de" : { "stringUnit" : { "state" : "translated", "value" : "Unbegrenzter Foto-Import" } },
+        "es" : { "stringUnit" : { "state" : "translated", "value" : "Importación ilimitada de fotos" } },
+        "fr" : { "stringUnit" : { "state" : "translated", "value" : "Import de photos illimité" } }
+      }
+    },
+    "앞으로 추가되는 필터도 전부" : {
+      "localizations" : {
+        "en" : { "stringUnit" : { "state" : "translated", "value" : "All future filters included" } },
+        "ja" : { "stringUnit" : { "state" : "translated", "value" : "今後追加されるフィルターもすべて" } },
+        "zh-Hans" : { "stringUnit" : { "state" : "translated", "value" : "未来新增滤镜全部包含" } },
+        "de" : { "stringUnit" : { "state" : "translated", "value" : "Alle zukünftigen Filter inklusive" } },
+        "es" : { "stringUnit" : { "state" : "translated", "value" : "Todos los filtros futuros incluidos" } },
+        "fr" : { "stringUnit" : { "state" : "translated", "value" : "Tous les futurs filtres inclus" } }
+      }
+    },
+    "%@ · 평생 소장" : {
+      "localizations" : {
+        "en" : { "stringUnit" : { "state" : "translated", "value" : "%@ · Yours forever" } },
+        "ja" : { "stringUnit" : { "state" : "translated", "value" : "%@ · 買い切り" } },
+        "zh-Hans" : { "stringUnit" : { "state" : "translated", "value" : "%@ · 永久拥有" } },
+        "de" : { "stringUnit" : { "state" : "translated", "value" : "%@ · Für immer deins" } },
+        "es" : { "stringUnit" : { "state" : "translated", "value" : "%@ · Tuyo para siempre" } },
+        "fr" : { "stringUnit" : { "state" : "translated", "value" : "%@ · À vous pour toujours" } }
+      }
+    },
+    "구독 없음 · 한 번 구매하면 평생 내 것" : {
+      "localizations" : {
+        "en" : { "stringUnit" : { "state" : "translated", "value" : "No subscription · Buy once, keep forever" } },
+        "ja" : { "stringUnit" : { "state" : "translated", "value" : "サブスクなし · 一度の購入でずっと使える" } },
+        "zh-Hans" : { "stringUnit" : { "state" : "translated", "value" : "无订阅 · 一次购买，永久使用" } },
+        "de" : { "stringUnit" : { "state" : "translated", "value" : "Kein Abo · Einmal kaufen, für immer behalten" } },
+        "es" : { "stringUnit" : { "state" : "translated", "value" : "Sin suscripción · Compra una vez, para siempre" } },
+        "fr" : { "stringUnit" : { "state" : "translated", "value" : "Sans abonnement · Achetez une fois, gardez pour toujours" } }
+      }
+    },
+    "구매 복원" : {
+      "localizations" : {
+        "en" : { "stringUnit" : { "state" : "translated", "value" : "Restore Purchase" } },
+        "ja" : { "stringUnit" : { "state" : "translated", "value" : "購入を復元" } },
+        "zh-Hans" : { "stringUnit" : { "state" : "translated", "value" : "恢复购买" } },
+        "de" : { "stringUnit" : { "state" : "translated", "value" : "Kauf wiederherstellen" } },
+        "es" : { "stringUnit" : { "state" : "translated", "value" : "Restaurar compra" } },
+        "fr" : { "stringUnit" : { "state" : "translated", "value" : "Restaurer l’achat" } }
+      }
+    },
+    "이용약관" : {
+      "localizations" : {
+        "en" : { "stringUnit" : { "state" : "translated", "value" : "Terms of Use" } },
+        "ja" : { "stringUnit" : { "state" : "translated", "value" : "利用規約" } },
+        "zh-Hans" : { "stringUnit" : { "state" : "translated", "value" : "使用条款" } },
+        "de" : { "stringUnit" : { "state" : "translated", "value" : "Nutzungsbedingungen" } },
+        "es" : { "stringUnit" : { "state" : "translated", "value" : "Términos de uso" } },
+        "fr" : { "stringUnit" : { "state" : "translated", "value" : "Conditions d’utilisation" } }
+      }
+    },
+    "개인정보처리방침" : {
+      "localizations" : {
+        "en" : { "stringUnit" : { "state" : "translated", "value" : "Privacy Policy" } },
+        "ja" : { "stringUnit" : { "state" : "translated", "value" : "プライバシーポリシー" } },
+        "zh-Hans" : { "stringUnit" : { "state" : "translated", "value" : "隐私政策" } },
+        "de" : { "stringUnit" : { "state" : "translated", "value" : "Datenschutzrichtlinie" } },
+        "es" : { "stringUnit" : { "state" : "translated", "value" : "Política de privacidad" } },
+        "fr" : { "stringUnit" : { "state" : "translated", "value" : "Politique de confidentialité" } }
+      }
+    }
+  },
+  "version" : "1.0"
+}

@@ -4,6 +4,17 @@ options:
   deploymentTarget:
     iOS: "17.0"
   createIntermediateGroups: true
+  developmentLanguage: ko
+fileGroups:
+  - ToyCam.storekit
+schemes:
+  ToyCam:
+    build:
+      targets:
+        ToyCam: all
+    run:
+      config: Debug
+      storeKitConfiguration: ToyCam.storekit
 settings:
   base:
     SWIFT_VERSION: "5.0"
@@ -21,6 +32,11 @@ targets:
     platform: iOS
     sources:
       - path: ToyCam
+        excludes:
+          - "AppIcon.icon"
+      - path: ToyCam/AppIcon.icon
+        buildPhase: resources
+        type: file
     settings:
       base:
         INFOPLIST_FILE: ToyCam/Info.plist

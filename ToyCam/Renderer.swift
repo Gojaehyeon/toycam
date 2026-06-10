@@ -3,6 +3,16 @@ import CoreVideo
 import CoreMedia
 import UIKit
 
+/// EXIF 회전을 픽셀에 구워 .up 방향으로 정규화.
+private extension UIImage {
+    var orientedUp: UIImage {
+        guard imageOrientation != .up else { return self }
+        return UIGraphicsImageRenderer(size: size).image { _ in
+            draw(in: CGRect(origin: .zero, size: size))
+        }
+    }
+}
+
 /// 카메라 텍스처를 셰이더로 처리해 MTKView에 그리고, 촬영 시 UIImage로 추출한다.
 final class Renderer: NSObject, MTKViewDelegate {
     let device: MTLDevice
@@ -203,6 +213,51 @@ final class Renderer: NSObject, MTKViewDelegate {
               let enc = cb.makeRenderCommandEncoder(descriptor: rpd) else { return nil }
         enc.setRenderPipelineState(pipeline)
         enc.setFragmentTexture(texture, index: 0)
+        enc.setFragmentSamplerState(sampler, index: 0)
+        enc.setFragmentBytes(&u, length: MemoryLayout<Uniforms>.stride, index: 0)
+        enc.drawPrimitives(type: .triangle, vertexStart: 0, vertexCount: 3)
+        enc.endEncoding()
+        cb.commit()
+        cb.waitUntilCompleted()
+
+        return Renderer.makeUIImage(from: target)
+    }
+
+    // MARK: 가져온 사진 변환 — 라이브러리 이미지를 현재 필터로 오프스크린 렌더 (PRO)
+
+    func process(image: UIImage) -> UIImage? {
+        let upright = image.orientedUp
+        guard let cg = upright.cgImage else { return nil }
+        let loader = MTKTextureLoader(device: device)
+        guard let source = try? loader.newTexture(
+            cgImage: cg, options: [MTKTextureLoader.Option.SRGB: false]) else { return nil }
+
+        // 원본 비율 유지, 긴 변 1600px 캡
+        let w = Double(cg.width), h = Double(cg.height)
+        let k = min(1.0, 1600.0 / max(w, h))
+        let outW = max(Int(w * k), 64), outH = max(Int(h * k), 64)
+
+        let td = MTLTextureDescriptor.texture2DDescriptor(
+            pixelFormat: .bgra8Unorm, width: outW, height: outH, mipmapped: false)
+        td.usage = [.renderTarget, .shaderRead]
+        guard let target = device.makeTexture(descriptor: td) else { return nil }
+
+        let rpd = MTLRenderPassDescriptor()
+        rpd.colorAttachments[0].texture = target
+        rpd.colorAttachments[0].loadAction = .clear
+        rpd.colorAttachments[0].clearColor = MTLClearColor(red: 0, green: 0, blue: 0, alpha: 1)
+        rpd.colorAttachments[0].storeAction = .store
+
+        var u = uniforms
+        u.resX = Float(outW); u.resY = Float(outH)
+        u.texAspect = Float(w / h)
+        u.viewAspect = Float(w / h)   // 비율 동일 → 크롭 없음
+        u.zoom = 1                    // 가져온 사진엔 줌 미적용
+
+        guard let cb = commandQueue.makeCommandBuffer(),
+              let enc = cb.makeRenderCommandEncoder(descriptor: rpd) else { return nil }
+        enc.setRenderPipelineState(pipeline)
+        enc.setFragmentTexture(source, index: 0)
         enc.setFragmentSamplerState(sampler, index: 0)
         enc.setFragmentBytes(&u, length: MemoryLayout<Uniforms>.stride, index: 0)
         enc.drawPrimitives(type: .triangle, vertexStart: 0, vertexCount: 3)

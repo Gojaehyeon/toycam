@@ -2,12 +2,15 @@ import SwiftUI
 import AVKit
 import AVFoundation
 
-/// 세션 중 앱 안에서 찍은 결과물 한 건.
+/// 앱 안에서 찍은 결과물 한 건 (Documents에 영구 보관).
 struct Shot: Identifiable {
     let id = UUID()
-    let thumbnail: UIImage   // 사진은 결과 원본, 영상은 첫 프레임 썸네일
+    let thumbnail: UIImage   // 앨범 그리드용 (다운스케일)
     let videoURL: URL?       // nil 이면 사진
+    let imageURL: URL?       // 사진 원본 파일 (영상이면 nil)
     var isVideo: Bool { videoURL != nil }
+    /// 뷰어용 원본 — 파일에서 로드, 실패 시 썸네일.
+    var fullImage: UIImage { imageURL.flatMap { UIImage(contentsOfFile: $0.path) } ?? thumbnail }
 }
 
 enum ShotThumbnail {
@@ -61,7 +64,7 @@ struct ShotViewer: View {
                         if let url = shot.videoURL {
                             LoopingPlayer(url: url)
                         } else {
-                            Image(uiImage: shot.thumbnail)
+                            Image(uiImage: shot.fullImage)
                                 .resizable()
                                 .scaledToFit()
                         }
